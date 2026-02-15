@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SwiftCart</title>
+     <title>SwiftCart| All Products</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="./product.js"></script>
+    <script src="./allProduct.js"></script>
 </head>
-<body>
-     <!-- navbar --> 
-      <section class="bg-base-100 shadow-sm">
+<body class="min-h-screen flex flex-col">
+    <!-- navbar -->
+     <section class="bg-base-100 shadow-sm">
         <div class="navbar  mx-auto max-w-[1600px]">
   <div class="navbar-start"> 
     <a class="btn btn-ghost text-3xl text-[#4a7ec7] font-bold">SwiftCart</a>
@@ -19,7 +19,7 @@
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1 text-xl font-semibold">
        <li><a>Home</a></li> 
-        <li><a href="./allProduct.html">Products</a></li>
+        <li><a>Products</a></li>
         <li><a>About</a></li>
         <li><a>Contact</a></li>
     </ul>
@@ -42,76 +42,32 @@
   </div>
 </div>
       </section>
+    <!-- navbar end -->
 
-      <!-- navbar end -->
-       <!-- Banner -->
-        <section>
-            <div
-  class="hero min-h-[600px]"
-  style="background-image: url(./Assets/banner-image.png);"
->
-  <div class="hero-overlay "></div>
-  <div class="hero-content text-left w-full max-w-[1600px] mx-auto justify-center md:justify-start px-4 lg:px-8">
-    <div class="max-w-md text-white  ">
-      <h1 class="mb-5 text-5xl font-bold">Best Collection For You</h1>
-      <p class="mb-5">
-        Discover the latest trend in fashion, electronics, and more. Shop with confidence and style at SwiftCart.
-        </p>
-      <button class="btn bg-[#4a7ec7] border-none text-white ">Shop Now</button>
-    </div>
-  </div>
-</div>
-        </section>
-         <!-- Banner end -->
+    <!-- category part -->
+     <section class="mt-15">
+        <div>
+            <h2 class="text-3xl font-bold text-center mb-8">Our Products</h2>
+        </div>
+        <div id="categories" class="text-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+            <p class="btn btn-outline   border-radius-lg">All</p>
+        </div>
+     </section>
 
-         <!-- choose us -->
-          <section class="max-w-[1600px] mx-auto py-16 px-4">
-            <div>
-                <h2 class="text-3xl font-bold text-center mb-8">why Choose us?</h2>
-                <p class="text-center text-gray-600">We provide the best shopping experience with top-notch service.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <i class="fa-solid fa-truck-fast text-4xl text-[#4a7ec7] mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-2">Fast Delivery</h3>
-                    <p class="text-gray-600">Get your orders delivered to your doorstep quickly and efficiently.</p> 
-                </div>
-                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <i class="fa-solid fa-headset text-4xl text-[#4a7ec7] mb-4"></i>
-                    <!-- <i class="fa-solid fa-truck-fast text-4xl text-[#4a7ec7] mb-4"></i> -->
-                    <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
-                    <p class="text-gray-600">Our customer support team is available around the clock to assist you.</p> 
-                </div>
-                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <i class="fa-solid fa-shield text-4xl text-[#4a7ec7] mb-4"></i>
-                    <!-- <i class="fa-solid fa-truck-fast text-4xl text-[#4a7ec7] mb-4"></i> -->
-                    <h3 class="text-xl font-semibold mb-2">Secure Payment</h3>
-                    <p class="text-gray-600">Experience safe and secure transactions with our encrypted payment system.</p> 
-                </div>
-                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <i class="fa-solid fa-arrows-rotate text-4xl text-[#4a7ec7] mb-4"></i>
-                    <!-- <i class="fa-solid fa-truck-fast text-4xl text-[#4a7ec7] mb-4"></i> -->
-                    <h3 class="text-xl font-semibold mb-2">Easy Returns</h3>
-                    <p class="text-gray-600">Not satisfied? Return your product easily within 30 days.</p> 
-                </div>
-            </div>
-          </section>
-          <!-- choose us end -->
+    <!-- category part end -->
 
-          <!-- trending part -->
-            <section class="max-w-[1600px] mx-auto py-16 px-4">
-                <div>
-                    <h2 class="text-3xl font-bold text-left mb-8">Trending Products</h2>
-                </div>
-                <div id="trending-products" class="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-8 mt-9">
-                    <!-- Product Card 1 -->
-                     
-                </div>
-            </section>
-          <!-- trending part end -->
 
-          <!-- footer -->
-           <footer class="bg-[#111827] text-white pt-16 pb-8  ">
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+     <footer class="bg-[#111827] text-white pt-16 pb-8 mt-auto ">
     <div class="footer max-w-[1600px] mx-auto px-4 lg:px-8 justify-between text-gray-400 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
         
         <aside class="max-w-xs">
@@ -165,9 +121,6 @@
         </div>
     </div>
 </footer>
-           <!-- footerEnd -->
-
-
-          
+     <!-- footer end -->
 </body>
 </html>
