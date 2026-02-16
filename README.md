@@ -1,5 +1,3 @@
-# JavaScript Interview Questions (Bangla)
-
 ## 1) null এবং undefined এর মধ্যে পার্থক্য কী?
 
 **null** মানে হলো কোনো ভ্যারিয়েবলের ভ্যালু ইচ্ছাকৃতভাবে খালি বা empty রাখা হয়েছে।  
