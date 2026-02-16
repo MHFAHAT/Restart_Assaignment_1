@@ -18,7 +18,7 @@
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1 text-xl font-semibold">
-       <li><a>Home</a></li> 
+       <li><a class="text-[#4a7ec7]">Home</a></li> 
         <li><a href="./allProduct.html">Products</a></li>
         <li><a>About</a></li>
         <li><a>Contact</a></li>
@@ -32,7 +32,7 @@
       <ul
         tabindex="-1"
         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Home</a></li> 
+        <li><a class="text-[#4a7ec7]">Home</a></li> 
         <li><a href="./allProduct.html">Products</a></li>
         <li><a>About</a></li>
         <li><a>Contact</a></li>
@@ -109,6 +109,20 @@
                 </div>
             </section>
           <!-- trending part end -->
+
+          <!-- modal  -->
+           <dialog id="product_details_modal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box max-w-4xl px-3">
+              <div id="modal-content">
+            </div>
+           <div class="modal-action">
+            <form method="dialog"> 
+              <button class="btn">Close</button>
+            </form>
+    </div>
+  </div>
+</dialog>
+           <!-- modal  end -->
 
           <!-- footer -->
            <footer class="bg-[#111827] text-white pt-16 pb-8  ">

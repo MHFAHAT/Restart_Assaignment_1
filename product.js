@@ -44,7 +44,7 @@ const fetchProducts = async () => {
                 <p class="text-2xl font-bold text-gray-900">$${product.price}</p>
 
                 <div class="card-actions justify-end mt-4">
-                    <button class="btn btn-outline border-gray-300 text-gray-600 hover:bg-gray-100 hover:text-black flex-1">
+                    <button onclick="showProductDetails(${product.id})" class="btn btn-outline border-gray-300 text-gray-600 hover:bg-gray-100 hover:text-black flex-1">
                         <i class="fa-regular fa-eye"></i> Details
                     </button>
                     <button class="btn bg-[#5b4eff] hover:bg-[#483bee] text-white border-none flex-1">
@@ -56,4 +56,36 @@ const fetchProducts = async () => {
         productContainer.appendChild(card);
     });
 };
+
+const showProductDetails = async (id) => {
+    const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+    const data = await res.json();
+    
+    const modalContainer = document.getElementById('modal-content');
+    modalContainer.innerHTML = `
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="flex-1 bg-gray-100 p-4 rounded-xl flex items-center justify-center">
+                <img src="${data.image}" class="max-h-60 object-contain mix-blend-multiply" />
+            </div>
+            <div class="flex-1">
+                <h3 class="font-bold text-2xl mb-2">${data.title}</h3>
+                <span class="badge badge-primary bg-[#4a7ec7] border-none mb-4 capitalize">${data.category}</span>
+                <p class="text-gray-600 mb-4 text-sm leading-relaxed">${data.description}</p>
+                <div class="flex items-center gap-4 mb-6">
+                    <p class="text-3xl font-bold text-gray-900">$${data.price}</p>
+                    <div class="badge badge-outline border-yellow-400 text-yellow-600 font-bold gap-1">
+                        <i class="fa-solid fa-star"></i> ${data.rating.rate}
+                    </div>
+                </div>
+                <button class="btn bg-[#5b4eff] text-white w-full hover:bg-[#483bee]">
+                    <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                </button>
+            </div>
+        </div>
+    `;
+
+    // Open the modal
+    product_details_modal.showModal();
+};
+
 fetchProducts();
